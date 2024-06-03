@@ -1,37 +1,140 @@
 package org.example;
 
 
+// 문제1 : 자동차 설계도를 만들어주세요.
+// 문제2 : 자동차 객체를 담을 변수를 만들어주세요.
+// 문제3 : 자동차 객체를 만들고 변수에 담아주세요.
+// 문제4 : 자동차 객체마다 서로 다른 최고속력를 가지도록 해주세요.
+
+//class Main {
+//    public static void main(String[] args) {
+//        MyObject a = new MyObject();
+//        a.이름 = "김철수";
+//        a.나이 = 25;
+//        a.weight = 75.2;
+//        a.키 = 178.2;
+//        a.결혼여부 = true;
+//        if (a.결혼여부) {
+//            System.out.printf("%s의 나이 : %d살, 몸무게 : %skg, 키 : %scm, 결혼여부 : %s\n", a.이름, a.나이, a.weight, a.키, "O");
+//        } else {
+//            System.out.printf("%s의 나이 : %d살, 몸무게 : %skg, 키 : %scm, 결혼여부 : %s\n", a.이름, a.나이, a.weight, a.키, "X");
+//        }
+//
+//
+//    }
+//
+//
+//}
+//
+//class MyObject {
+//
+//    double weight;
+//    int 나이;
+//    double 키;
+//    boolean 결혼여부;
+//    String 이름;
+//
+//
+//}
+
+//// 문제1 : 자동차 설계도를 만들어주세요.
+//// 문제2 : 자동차 객체를 담을 변수를 만들어주세요.
+//// 문제3 : 자동차 객체를 만들고 변수에 담아주세요.
+//// 문제4 : 자동차 객체마다 서로 다른 최고속력를 가지도록 해주세요.
+//// 문제5 : 1개의 자동차가 3번 달리게 해주세요.
+//// 문제7 : 3개의 자동차가 각각 1번씩 달리게 해주세요.
+//class Main {
+//    public static void main(String[] args) {
+//        문제 2 답.
+//        자동차 a자동차;
+//
+//
+//        자동차 a자동차 = new 자동차();
+//        a자동차.최고속력 = 180;
+//        a자동차.번호 = 1;
+//
+//        자동차 b자동차 = new 자동차();
+//        b자동차.최고속력 = 200;
+//        b자동차.번호 = 2;
+//
+//        자동차 c자동차 = new 자동차();
+//        c자동차.최고속력 = 220;
+//        c자동차.번호 = 3;
+//
+////        문제 4, 7번 답
+//        System.out.printf("%d번 자동차가 최고속력 %dkm로 달린다.\n", a자동차.번호, a자동차.최고속력);
+//        System.out.printf("%d번 자동차가 최고속력 %dkm로 달린다.\n", b자동차.번호, b자동차.최고속력);
+//        System.out.printf("%d번 자동차가 최고속력 %dkm로 달린다.\n", c자동차.번호, c자동차.최고속력);
+//
+////        5번 답
+////        System.out.printf("%d번 자동차가 달린다\n",a자동차.번호);
+////        System.out.printf("%d번 자동차가 달린다\n",a자동차.번호);
+////        System.out.printf("%d번 자동차가 달린다\n",a자동차.번호);
+//
+//    }
+//} 문제 1 답.
+//class 자동차 {
+//    문제 3 답.
+//    int 최고속력;
+//    int 번호;
+//}
+
+
+//// 문제6 : 객체를 사용하지 않고 2번째 플레이어를 만들어주세요.
+//
+//class Main {
+//    public static void main(String[] args) {
+//        플레이어 a플레이어1;
+//        a플레이어1 = new 플레이어();
+//        a플레이어1.나이 = 20;
+//        a플레이어1.이름 = "홍길동";
+//        a플레이어1.직업 = "의적";
+//
+//        int a플레이어2_나이 = 21;
+//        String a플레이어2_이름 = "홍길순";
+//        String a플레이어2_직업 = "도둑";
+//        // 코드수가 객체를 만든것보다 더 적다.
+//    }
+//}
+//class 플레이어 {
+//    int 나이;
+//    String 이름;
+//    String 직업;
+//}
+
+// 문제8 : 각각의 자동차가 서로 다른 최고속력으로 달리게 해주세요.
+
 class Main {
     public static void main(String[] args) {
 
-        boolean[] arr1 = new boolean[3];
-        arr1[0] = true;
-        arr1[1] = false;
-        arr1[2] = true;
-        for (int i = 0; i <= arr1.length - 1; i++) {
-            System.out.printf("arr1 : %s\n", arr1[i]);
-        }
+        // 구현시작
+        자동차 a자동차1 = new 자동차();
+        a자동차1.번호 = 1;
+        a자동차1.최고속력 = 230;
+
+        자동차 a자동차2 = new 자동차();
+        a자동차2.번호 = 2;
+        a자동차2.최고속력 = 210;
 
 
-        double[] arr2 = new double[3];
-        arr2[0] = 3.14;
-        arr2[1] = 7.77;
-        arr2[2] = 11.11;
-        for (int i = 0; i <= arr2.length - 1; i++) {
-            System.out.printf("arr2 : %s\n", arr2[i]);
-        }
 
+        // 구현끝
 
-        int[] arr3 = new int[10];
-        for (int i = 0; i <= arr3.length - 1; i++) {
-            arr3[i] = i + 1;
-            System.out.printf("arr3 : %d\n", arr3[i]);
-        }
+        a자동차1.달리다();
+        // 출력 => 자동차가 최고속력 230km로 달립니다.
 
+        a자동차2.달리다();
+        // 출력 => 자동차가 최고속력 210km로 달립니다.
     }
 }
 
-
-
+class 자동차 {
+    // 구현
+    int 번호;
+    int 최고속력;
+    void 달리다() {
+        System.out.printf("%d번 자동차가 최고속력 %dkm로 달립니다.\n", 번호, 최고속력);
+    }
+}
 
 
