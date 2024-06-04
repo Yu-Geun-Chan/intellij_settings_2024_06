@@ -7,7 +7,7 @@ package org.example;
 // 문제4 : 자동차 객체마다 서로 다른 최고속력를 가지도록 해주세요.
 
 //class Main {
-//    public static void main(String[] args) {
+//    public static void main(String[] args)  {
 //        MyObject a = new MyObject();
 //        a.이름 = "김철수";
 //        a.나이 = 25;
@@ -85,7 +85,7 @@ package org.example;
 //class Main {
 //    public static void main(String[] args) {
 //        플레이어 a플레이어1;
-//        a플레이어1 = new 플레이어();
+//        a플레이어1 = new 플레이어();g
 //        a플레이어1.나이 = 20;
 //        a플레이어1.이름 = "홍길동";
 //        a플레이어1.직업 = "의적";
