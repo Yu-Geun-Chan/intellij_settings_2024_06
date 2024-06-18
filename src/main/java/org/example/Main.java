@@ -1,58 +1,164 @@
 package org.example;
+// 문제 : 아래와 같이 출력되도록 해주세요.
+// 조건 : `숨쉬다` 기능을 중복하지 말아주세요.
 
+//class Main {
+//    public static void main(String[] args) {
+//        사람 a사람 = new 사람();
+//        a사람.숨쉬다();
+//    }
+//}
+//class 동물 {
+//    void 숨쉬다() {
+//        System.out.println("숨쉬다.");
+//    }
+//}
+//class 사람 extends 동물 {
+//
+//}
+
+///* 가정
+//우리는 게임개발회사에 입사했다.
+//우리에게는 성격좋은 사수 한명이 있다.
+//내가 개발할 게임은 오리시뮬레이션 게임이다.
+//선임이 나의 개발을 도와주진 않지만 조언은 해준다.
+//*/
+///* 요구사항
+//- D1 요구 : 오리를 생성하고 날게하시오.
+//- D2 요구 : 게임의 디테일을 살리기 위해서 `청둥오리`와 `흰오리`를 생성하고 날게하시오.
+//- D3 요구 : 오리 계열의 클래스에 날다 메서드가 중복되었습니다. 중복을 제거해주세요.
+//- D4 요구 : 게임의 재미를 위하여 고무오리를 추가하고 날게 하시오.
+//- D5 요구 : 주말 주주회의에서 고무오리가 하늘을 날아다니는 것에 대해서 태클이 들어왔습니다.
+//고무오리 계열은 하늘을 날 수 없게 해주세요.
+//- D6 요구 : 고무오리가 반응이 좋습니다. 고무2오리를 추가하고 날게 해주세요.
+//- D7 요구 : 고무오리계열에서 날다 메서드의 중복을 제거해주세요.
+//- D8 요구 : 자바에서 다중상속은 불가능 합니다. 상속에는 한계가 있습니다.
+//복잡한 상속을 사용하지 않고 고무오리계열의 중복을 제거해주세요.
+//*/
+//class Main {
+//    public static void main(String[] args) {
+//
+//        청둥오리 a청둥오리 = new 청둥오리();
+//        a청둥오리.날다();
+//
+//        흰오리 a흰오리 = new 흰오리();
+//        a흰오리.날다();
+//
+//        고무오리 a고무오리 = new 고무오리();
+//        a고무오리.날다();
+//
+//        고무2오리 a고무2오리 = new 고무2오리();
+//        a고무2오리.날다();
+//
+//        // 출력 : 오리가 날개로 날아갑니다.
+//    }
+//}
+//
+//class 오리 {
+//    void 날다() {
+//        System.out.println("오리가 날개로 날아갑니다.");
+//    }
+//}
+//
+//class 청둥오리 extends 오리 {
+//
+//}
+//
+//class 흰오리 extends 오리 {
+//
+//}
+//
+//class 고무오리 extends 오리 {
+//    void 날다() {
+//        System.out.println("저는 날 수 없어요. ㅜㅠ");
+//    }
+//}
+//
+//class 고무2오리 extends 오리 {
+//    고무오리 a고무오리 = new 고무오리();
+//
+//    void 날다() {
+//        this.a고무오리.날다();
+//    }
+//}
+
+// 문제 : 아래와 같이 출력되도록 해주세요.
+// 조건 : 소스코드 중복이 없어야 합니다.
+// 조건 : 복잡한 상속을 써도 됩니다.
 
 class Main {
     public static void main(String[] args) {
-//        boolean rs = Math.isPrimeNumber(1);
-//        System.out.println("1은(는) 소수인가? : " + rs);
-//
-//        rs = Math.isPrimeNumber(2);
-//        System.out.println("2은(는) 소수인가? : " + rs);
-//
-//        rs = Math.isPrimeNumber(4);
-//        System.out.println("4은(는) 소수인가? : " + rs);
-//
-//        rs = Math.isPrimeNumber(7);
-//        System.out.println("7은(는) 소수인가? : " + rs);
-//
-//        rs = Math.isPrimeNumber(5);
-//        System.out.println("5은(는) 소수인가? : " + rs);
+        System.out.println("== 청둥오리 ==");
+        청둥오리 a청둥오리 = new 청둥오리();
+        a청둥오리.날다(); // 오리가 날개로 날아갑니다.
+        a청둥오리.수영하다(); // 오리가 물갈퀴로 수영합니다.
 
+        System.out.println("== 흰오리 ==");
+        흰오리 a흰오리 = new 흰오리();
+        a흰오리.날다(); // 오리가 날개로 날아갑니다.
+        a흰오리.수영하다(); // 오리가 물갈퀴로 수영합니다.
 
-        int rs2 = Math.one_to_n_prime_numbers(10);
-        System.out.println("rs2 : " + rs2);
-        // rs = 4;
-        rs2 = Math.one_to_n_prime_numbers(13);
-        System.out.println("rs2 : " + rs2);
-        // rs = 6;
+        System.out.println("== 고무오리 ==");
+        고무오리 a고무오리 = new 고무오리();
+        a고무오리.날다(); // 저는 못 날아요 ㅠㅠ
+        a고무오리.수영하다(); // 오리가 물에 둥둥 떠다닙니다.
+
+        System.out.println("== 고무2오리 ==");
+        고무2오리 a고무2오리 = new 고무2오리();
+        a고무2오리.날다(); // 저는 못 날아요 ㅠㅠ
+        a고무2오리.수영하다(); // 오리가 물에 둥둥 떠다닙니다.
+
+        System.out.println("== 로봇오리 ==");
+        로봇오리 a로봇오리 = new 로봇오리();
+        a로봇오리.날다(); // 오리가 날개로 날아갑니다.
+        a로봇오리.수영하다(); // 오리가 물에 둥둥 떠다닙니다.
     }
 }
 
-class Math {
-    public static int one_to_n_prime_numbers(int n) {
-        int count = 0;
-        for (int i = 1; i <= n; i++) {
-            if (isPrimeNumber(i)) {
-                System.out.println(i + "은(는) 소수이다.");
-                count++;
-            }
-        }
-        return count;
+class 오리 {
+    void 날다() {
+        System.out.println("오리가 날개로 날아갑니다.");
     }
 
-
-    public static boolean isPrimeNumber(int num) {
-        if (num == 1) {
-            return false;
-        }
-        for (int i = 2; i < num; i++) {
-            if (num % i == 0) {
-                return false;
-            }
-        }
-        return true;
+    void 수영하다() {
+        System.out.println("오리가 물갈퀴로 수영합니다.");
     }
 }
+class 흰오리 extends 오리 {
+
+}
+
+class 청둥오리 extends 오리 {
+
+}
+
+class 고무오리 extends 오리 {
+    void 날다() {
+        System.out.println("저는 못 날아요. ㅜㅠ");
+    }
+    void 수영하다() {
+        System.out.println("오리가 물에 둥둥 떠다닙니다.");
+    }
+}
+class 고무2오리 extends 오리 {
+    고무오리 a고무오리 = new 고무오리();
+
+    void 날다() {
+        this.a고무오리.날다();
+    }
+    void 수영하다() {
+        this.a고무오리.수영하다();
+    }
+}
+
+class 로봇오리 extends 오리 {
+    고무오리 a고무오리 = new 고무오리();
+
+    void 수영하다() {
+        this.a고무오리.수영하다();
+    }
+}
+
 
 
 
