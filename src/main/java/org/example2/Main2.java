@@ -1,21 +1,25 @@
 package org.example2;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Main2 {
     public static void main(String[] args) {
-        boolean rs = Math.isEvenNumber(2);
-        System.out.println(rs);
 
-        rs = Math.isEvenNumber(3);
-        System.out.println(rs);
+        Map<String, Integer> agesMap = new HashMap<>();
+        agesMap.put("철수", 20); // index : 철수(key가 맞다, 이해를 돕기 위해 index라고 표현)
+        agesMap.put("영희", 22); // index : 영희(key가 맞다, 이해를 돕기 위해 index라고 표현)
+        agesMap.put("영수", 33); // index : 영수(key가 맞다, 이해를 돕기 위해 index라고 표현)
 
-        rs = Math.isEvenNumber(5);
-        System.out.println(rs);
-        //true
-    }
-}
-class Math {
 
-    public static boolean isEvenNumber(int n) { //짝수 판별기
-        return n % 2 == 0;
+        agesMap.remove("영희");
+
+
+        System.out.println("철수 나이 : " + agesMap.get("철수"));
+        System.out.println("영희 나이 : " + agesMap.get("영희"));
+        System.out.println("영수 나이 : " + agesMap.get("영수"));
+
+
+        System.out.println(agesMap.size());
     }
 }
