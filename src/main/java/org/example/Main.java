@@ -1,7 +1,10 @@
 package org.example;
 // 문제 : 아래가 실행되도록 해주세요.
-// 조건 : 배열을 사용할 수 없습니다.
 
+import java.util.HashMap;
+import java.util.Map;
+
+// v4 HashMap사용
 class Main {
     public static void main(String[] args) {
         사람인력관리소 a사람인력관리소 = new 사람인력관리소();
@@ -27,41 +30,23 @@ class Main {
     }
 }
 class 사람인력관리소 {
-    사람 a1번사람;
-    사람 a2번사람;
-    사람 a3번사람;
 
-    int lastId;
+    Map<Integer,사람> People = new HashMap<>();
+    int lastId = 0;
+
     void add사람(String name, int age) {
+        int id = lastId + 1;
+
         사람 a사람 = new 사람();
-        a사람.id = lastId + 1;
+        a사람.id = id;
         a사람.age = age;
         a사람.name = name;
+        People.put(id, a사람);
         System.out.printf("나이가 %d살인 %d번째 사람(%s)가 추가되었습니다.\n", a사람.age, a사람.id, a사람.name);
-        if (a사람.id == 1) {
-            a1번사람 = a사람;
-        }
-        if (a사람.id == 2) {
-            a2번사람 = a사람;
-        }
-        if (a사람.id == 3) {
-            a3번사람 = a사람;
-        }
-
-        this.lastId = a사람.id;
-
+        lastId = id;
     }
     사람 get사람(int num) {
-        if (num == 1) {
-            return a1번사람;
-        }
-        if (num == 2) {
-            return a2번사람;
-        }
-        if (num == 3) {
-            return a3번사람;
-        }
-        return null;
+        return People.get(num);
     }
 }
 class 사람 {
