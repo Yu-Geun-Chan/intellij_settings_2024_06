@@ -1,26 +1,41 @@
 package org.example2;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 class Main2 {
     public static void main(String[] args) {
+        // 일반
+        int[] arr = {33, 2, 55, 4, 51, 6, 71, 18, 29, 10};
 
-        Scanner sc = new Scanner(System.in);
+        List<Integer> resultAl = new ArrayList<Integer>();
 
-        String[] strs = sc.nextLine().split(" ");
+        // filter
+        for(int n : arr) if (n % 2 == 0) resultAl.add(n);
 
-        long sum = 0;
-
-//        for(int i = 0; i < strs.length; i++) {
-//            sum += Long.parseLong(strs[i]);
-//        }
-
-        for (String strData : strs) { // 향상된 for 문
-            sum += Long.parseLong(strData);
+        // map
+        for (int i = 0; i < resultAl.size(); i++) {
+            int newValue = resultAl.get(i) * 2;
+            resultAl.set(i, newValue);
         }
+        System.out.println(resultAl);
 
-        System.out.println(sum);
+        // Stream
+        arr = new int[]{33, 2, 55, 4, 51, 6, 71, 18, 29, 10};
 
-        sc.close();
+        resultAl = Arrays.stream(arr)
+                .filter(e -> e % 2 == 0)
+                .map(e -> e * 2)
+                .boxed()
+                // 밑에 .collect(Collectors.toList());를 썼을 때
+                // no instance(s) of type variable(s)가 뜨면 boxed();를 넣어주면 된다.(new Integer의 기능)
+                .collect(Collectors.toList());
+
+        System.out.println(resultAl);
     }
 }
+
+
+
